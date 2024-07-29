@@ -1,0 +1,125 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific Files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific Files for VS
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.g.cs
+*.g.i.cs
+*.compiled
+
+# Logs
+*.log
+
+# Database
+*.mdf
+*.ldf
+*.ndf
+
+# Configuration
+appsettings*.json
+
+# Entity Framework
+migrations/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.history/
+.vscode-test/
+
+# Npm packages
+node_modules/
+
+# Libman
+libman.json
+
+# By default, archives
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.gzip
+*.bz2
+*.xz
+
+# Ignore Mac and Linux file system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux directory file
+.directory
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# Rider
+.idea/
+.idea_modules/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/libraries
+.idea/.name
+.idea/modules.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+
+# Microsoft Office
+*.docx
+*.xlsx
+*.pptx
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Other
+.vs/
