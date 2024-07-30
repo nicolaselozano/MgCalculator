@@ -10,6 +10,6 @@ public class User
     public string Name { get; set; }
     [Required]
     public string Email { get; set; }
-    public string authId { get; set; }
+    public string? authId { get; set; }
     public List<CardsUser>? CardsUsers { get; set; } = new List<CardsUser>();
 }
