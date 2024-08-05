@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using DatabaseR;
+using Cards.Services;
+using Users.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddDbContext<CardsApi>(
     new MySqlServerVersion(new Version(8, 0, 23)))
     );
 
+builder.Services.AddScoped<ICardS, CardS>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
