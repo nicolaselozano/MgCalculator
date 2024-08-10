@@ -7,17 +7,17 @@ namespace CCardAnalisis.Controller;
 [Route("api/[controller]")]
 public class CCardAnalisis : ControllerBase
 {
-    readonly CardsAnalisis _cardsAnalisis;
-    public CCardAnalisis(CardsAnalisis cardsAnalisis)
+    readonly ICardsAnalisis _cardsAnalisis;
+    public CCardAnalisis(ICardsAnalisis cardsAnalisis)
     {
         _cardsAnalisis = cardsAnalisis;
     }
     [HttpGet]
-    public IActionResult GetDetailsCard(string cardId,string key,string urlService)
+    public ActionResult<TextDocument> GetDetailsCard (string imgUrl,string key,string urlService)
     {
         try
         {
-            TextDocument textDocument = _cardsAnalisis.GetTextDocument(cardId,key,urlService);
+            TextDocument textDocument = _cardsAnalisis.GetTextDocument(imgUrl,key,urlService);
             
             return Ok(textDocument);
         }

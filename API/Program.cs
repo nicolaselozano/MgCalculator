@@ -15,6 +15,7 @@ builder.Services.AddDbContext<CardsApi>(
 
 builder.Services.AddScoped<ICardS, CardS>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddTransient<ICardsAnalisis, CardsAnalisis>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
