@@ -3,10 +3,7 @@ using Azure.AI.Vision.ImageAnalysis;
 using Cards.Models;
 using CardsJson;
 
-public interface ICardsAnalisis
-{
-    TextDocument GetTextDocument(string imgUrl,string key,string urlService);
-}
+namespace CardsAnalisisN.Service;
 
 public class CardsAnalisis : ICardsAnalisis
 {

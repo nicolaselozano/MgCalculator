@@ -5,6 +5,12 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{13DF292F-C47F-4A14-B016-644E6AF2DB00}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{6CC57BD0-0BB7-4B39-90E8-E4F76E70A470}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsAnalisis.Tests", "API\CardsAnalisis.Tests\CardsAnalisis.Tests.csproj", "{5D01D3D8-60AA-42DA-AA72-57176729A9B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsAnalisis.Tests", "CardsAnalisis.Tests\CardsAnalisis.Tests.csproj", "{9DF9924B-D210-4F1C-A811-EB63B65CACD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +21,23 @@ Global
 		{13DF292F-C47F-4A14-B016-644E6AF2DB00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13DF292F-C47F-4A14-B016-644E6AF2DB00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13DF292F-C47F-4A14-B016-644E6AF2DB00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D01D3D8-60AA-42DA-AA72-57176729A9B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D01D3D8-60AA-42DA-AA72-57176729A9B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D01D3D8-60AA-42DA-AA72-57176729A9B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D01D3D8-60AA-42DA-AA72-57176729A9B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF9924B-D210-4F1C-A811-EB63B65CACD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF9924B-D210-4F1C-A811-EB63B65CACD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF9924B-D210-4F1C-A811-EB63B65CACD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF9924B-D210-4F1C-A811-EB63B65CACD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEFF3DA2-7E91-4C87-B900-FEC1A09F7E32}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13DF292F-C47F-4A14-B016-644E6AF2DB00} = {6CC57BD0-0BB7-4B39-90E8-E4F76E70A470}
+		{5D01D3D8-60AA-42DA-AA72-57176729A9B3} = {6CC57BD0-0BB7-4B39-90E8-E4F76E70A470}
 	EndGlobalSection
 EndGlobal

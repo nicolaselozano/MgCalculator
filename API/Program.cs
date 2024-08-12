@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using DatabaseR;
 using Cards.Services;
 using Users.Services;
+using CardsAnalisisN.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
