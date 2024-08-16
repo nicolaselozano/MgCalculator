@@ -15,8 +15,8 @@ public class Word
 public class Line
 {
     public string Text { get; set; }
-    public List<BoundingPolygon> BoundingPolygon { get; set; }
-    public List<Word> Words { get; set; }
+    public List<BoundingPolygon>? BoundingPolygon { get; set; }
+    public List<Word>? Words { get; set; }
 }
 
 public class TextDocument

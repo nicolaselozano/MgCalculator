@@ -35,4 +35,5 @@ public class CardsAnalysisTests
         Assert.NotNull(result);
         Assert.NotEmpty(result.Lines);
     }
+    
 }

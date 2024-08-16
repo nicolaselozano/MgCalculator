@@ -2,6 +2,7 @@ using Azure;
 using Azure.AI.Vision.ImageAnalysis;
 using Cards.Models;
 using CardsJson;
+using ICardJson;
 
 namespace CardsAnalisisN.Service;
 
@@ -38,7 +39,7 @@ public class CardsAnalisis : ICardsAnalisis
                     Line customLine = new Line{
                         Text = line.Text,
                         BoundingPolygon = new List<BoundingPolygon>(),
-                        Words = new List<Word>()
+                        // Words = new List<Word>()
                     };
 
                     foreach (var item in line.BoundingPolygon)
@@ -49,23 +50,7 @@ public class CardsAnalisis : ICardsAnalisis
 
 
                     Console.WriteLine($"   Line: '{line.Text}', Bounding Polygon: [{string.Join(" ", line.BoundingPolygon)}]");
-                    foreach (DetectedTextWord word in line.Words)
-                    {
-                        Word customWord = new Word
-                        {
-                            Text = word.Text,
-                            Confidence = word.Confidence,
-                            BoundingPolygon = new List<BoundingPolygon>()
-                        };
-                        foreach (var point in word.BoundingPolygon)
-                        {
-                            customWord.BoundingPolygon.Add(new BoundingPolygon { X = point.X, Y = point.Y });
-                        }
 
-                        customLine.Words.Add(customWord);
-
-                        Console.WriteLine($"     Word: '{word.Text}', Confidence {word.Confidence.ToString("#.####")}, Bounding Polygon: [{string.Join(" ", word.BoundingPolygon)}]");
-                    }
                     textDocument.Lines.Add(customLine);
                 }
             }
@@ -77,7 +62,17 @@ public class CardsAnalisis : ICardsAnalisis
             
             throw;
         }
-
-
+    }
+    public CardApiJson GetCardApiData(TextDocument cardData)
+    {
+        try
+        {
+            return null;
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
     }
 }
