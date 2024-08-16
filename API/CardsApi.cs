@@ -28,6 +28,10 @@ namespace DatabaseR
             .HasOne(cu => cu.Card)
             .WithMany(cu => cu.CardsUsers)
             .HasForeignKey(cu => cu.CardId);
+            modelBuilder.Entity<Abilities>()
+            .HasMany(a => a.Cards)
+            .WithMany(a => a.abilities)
+            .UsingEntity("CardsAbilities");
             
         }
     }
