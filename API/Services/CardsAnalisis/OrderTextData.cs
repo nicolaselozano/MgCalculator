@@ -1,6 +1,7 @@
 
 using CardsJson;
 
+namespace CardsAnalisisN.Service;
 public static class OrderTextData
 {
     

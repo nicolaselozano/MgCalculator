@@ -1,3 +1,5 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Azure;
 using Azure.AI.Vision.ImageAnalysis;
 using Cards.Models;
@@ -63,11 +65,21 @@ public class CardsAnalisis : ICardsAnalisis
             throw;
         }
     }
-    public CardApiJson GetCardApiData(TextDocument cardData)
+    public async Task<CardApiJson> GetCardApiData(string title)
     {
         try
         {
-            return null;
+            HttpClient httpClient = new HttpClient();
+
+            HttpResponseMessage response = await httpClient.GetAsync($"https://api.magicthegathering.io/v1/cards?name={title}");
+            response.EnsureSuccessStatusCode();
+
+            string content = await response.Content.ReadAsStringAsync();
+
+            // Deserializar el JSON en un objeto de tipo CardApiJson
+            CardApiJson jsonCard = JsonSerializer.Deserialize<CardApiJson>(content);
+
+            return jsonCard;
         }
         catch (System.Exception)
         {

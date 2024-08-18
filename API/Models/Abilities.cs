@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Cards.Models;
 
-public class Abilities
+public class Abilitie
 {  
     [Key]
     public Guid Id { get; set;}

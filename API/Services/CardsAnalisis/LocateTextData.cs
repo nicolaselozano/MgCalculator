@@ -1,12 +1,13 @@
 using CardsJson;
-
+namespace CardsAnalisisN.Service;
 interface ILocateTextData
 {  
-    public string LocateText(TextDocument allLines);
+    public string LocateTitleText(TextDocument allLines);
+    public List<T> LocateDescriptionText<T>(string textDescription,Func<string[],List<T>> strategy);
 }
 public class LocateTextData: ILocateTextData
 {
-    public string LocateText(TextDocument allLines)
+    public string LocateTitleText(TextDocument allLines)
     {
         try
         {
@@ -14,6 +15,21 @@ public class LocateTextData: ILocateTextData
             string title = getTitulo(allLines.Lines.First());
 
             return title;
+
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
+    }
+    public List<T> LocateDescriptionText<T>(string textDescription, Func<string[], List<T>> strategy)
+    {
+        try
+        {
+            string[] listText = textDescription.Split(" ");
+
+            return strategy(listText);
 
         }
         catch (System.Exception)

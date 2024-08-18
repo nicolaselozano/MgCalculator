@@ -15,6 +15,7 @@ namespace DatabaseR
         public DbSet<User> Users { get; set; }
         public DbSet<CardsUser> CardsUsers { get; set; }
         public DbSet<Card> Cards { get; set; }
+        public DbSet<Abilitie> Abilities { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,7 +29,7 @@ namespace DatabaseR
             .HasOne(cu => cu.Card)
             .WithMany(cu => cu.CardsUsers)
             .HasForeignKey(cu => cu.CardId);
-            modelBuilder.Entity<Abilities>()
+            modelBuilder.Entity<Abilitie>()
             .HasMany(a => a.Cards)
             .WithMany(a => a.abilities)
             .UsingEntity("CardsAbilities");

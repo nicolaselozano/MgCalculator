@@ -10,7 +10,7 @@ public class Card
     public Guid Id { get; set;}
     public List<User>? Users { get; set; } = new List<User>();
     public List<CardsUser>? CardsUsers{ get; set; } = new List<CardsUser>();
-    public List<Abilities> abilities{ get; set; } = new List<Abilities>();
+    public List<Abilitie> abilities{ get; set; } = new List<Abilitie>();
     public string MultiverseId { get; set; }
     public bool isDeleted { get; set; } = false;
 

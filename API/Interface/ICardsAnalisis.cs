@@ -4,5 +4,5 @@ namespace CardsAnalisisN.Service;
 public interface ICardsAnalisis
 {
     TextDocument GetTextDocument(string imgUrl,string key,string urlService);
-    CardApiJson  GetCardApiData(TextDocument cardData);
+    public Task<CardApiJson> GetCardApiData(string title);
 }
